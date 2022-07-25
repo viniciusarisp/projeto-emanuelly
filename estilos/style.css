@@ -1,6 +1,57 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: ;
-  src: url();
+  font-family: 'Tan Pearl';
+  src: url(../fontes/tan-pearl/TAN-PEARL.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tenor Sans';
+  src: url(../fontes/tenor-sans/tenor-sans.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --fonte0: 'Tan Pearl';
+  --fonte1: 'Tenor Sans';
+  --cor0: #806B58;
+  --cor1: #78742A;
+  --cor2: #A36127;
+  --cor3: #D8C5B7;
+  --cor4: #603807;
+  --cor5: #524D30;
+}
+
+* {
+  margin: 0px;
+  border: 0px;
+}
+
+body {
+  background-color: var(--cor3);
+}
+
+header {
+  padding: 90px;
+  position: relative;
+}
+header > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%
+  );
+}
+header h1 {
+  display: inline-block;
+  font-family: var(--fonte0);
+  font-size: 3vw;
+  padding: 15px;
+  border: 5px solid 
+  var(--cor2);
+  border-style: double;
+  
 }
