@@ -23,35 +23,135 @@
   --cor3: #D8C5B7;
   --cor4: #603807;
   --cor5: #524D30;
+  --black: black;
+  --white: white;
+
 }
 
 * {
   margin: 0px;
   border: 0px;
   padding: 0px;
+
 }
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+
+div.colunadraw {
+position: absolute;
+background-color: var(--cor1);
+width: 3%;
+height: 100%;
+}
+
+
 
 header {
-  background-color: #524D30;
-  padding-top: 25vh;
-}
-
-h1 {
-  color: var(--cor3);
-  font-family: var(--fonte0);
-  font-size: 2vmin, 6vmax;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.623);
-  white-space: nowrap;
-  font-variant: small-caps;
-  padding: 90px;
-}
-
-.container { 
+  width: 99vw;
   position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 5%;
+  align-content: center;
 }
-.content {
+
+div#logomanu {
+  margin-top: -18%;
+  width: 50%;
+  height: 50%;
+}
+
+img#logomanu {
+  width: 100%;
+  height: 100%;
+}
+
+header h1{
+  display: inline-block;
+  font-variant: normal;
+  font-family: var(--fonte0);
+  font-size: 4vw;
+  white-space: nowrap;
+  margin-left: 9%;
+  margin-top: 10%;
+}
+header h2 {
+  display: inline-block;
+  font-family: var(--fonte0);
+  font-weight: bolder;
+  font-size: 2.5vw;
+  white-space: nowrap;
+  margin-left: 9%;
+}
+
+nav {
+  font-size: 2vw;
+  margin-top: 3%;
+  margin-right: 5%;
+  display: inline-flex;
+  position: relative;
+  text-decoration: none;
+  font-family: var(--fonte1);
+  color: black;
+}
+nav > a, a:visited {
+  position: relative;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px;
+  padding-bottom: 1vh;
+}
+a::before {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 3px;
+  border-radius: 4px;
+  background-color: var(--cor2);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .2s ease-in-out;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+main {
+  padding-top: 5%;
+  width: min(100% - 5%);
+  margin-inline: auto;
+  font-family: var(--fonte1);
+}
+article {
+  padding: 10px;
+}
+
+main > h1 , h2{
+  text-align: center;
+  font-size: 2.5vw
+}
+main > h2 {
+  font-weight: bold;
+  font-size: 3vw;
+  margin-bottom: 40px;
+}
+
+article#container {
+  display: flex;
+  flex-flow: row nowrap;  
+  justify-content: center;
+  align-items: baseline;
+}
+
+div.texto {
+  margin: 0 30px;
+text-align: left;
 }
