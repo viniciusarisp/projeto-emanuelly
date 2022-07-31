@@ -32,7 +32,6 @@
   margin: 0px;
   border: 0px;
   padding: 0px;
-
 }
 body, ul, li, p {
   margin: 0px;
@@ -40,6 +39,9 @@ body, ul, li, p {
   list-style: none;
   font-family: var(--fonte1);
 }
+
+
+/* CABEÇALHO CABEÇALHO CABEÇALHO CABEÇALHO CABEÇALHO CABEÇALHO CABEÇALHO */
 
 a {
   color: black;
@@ -51,6 +53,27 @@ a {
   justify-content: space-between;
   padding: 20px;
   align-items: center;
+}
+
+.header h1 {
+  color: var(--cor2);
+  font-family: var(--fonte0);
+  font-size: 3rem;
+  font-weight: normal;
+  text-align: right;
+  line-height: 100%;
+}
+
+.header h1::before {
+  text-align: center;
+  font-family: var(--fonte1);
+  font-variant: small-caps;
+  font-weight: bold;
+  content: 'CONSULTORIA DE MODA';
+  display: block;
+  font-size: 0.3em;
+  margin-bottom: -25px;
+  margin-left: -40px;
 }
 
 .menu {
@@ -69,19 +92,31 @@ a {
 
 }
 
-h1 {
+body > h1 {
   font-variant: small-caps;
   text-align: center;
   margin-top: 50px;
 }
 
-h2 {
+body > h2 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
-div > h2 {
+section.grid1 > div > h2 {
+  text-align: center;
   font-family: var(--fonte0);
   margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+body > h2::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 5px;
+  background-color: var(--cor5);
+  margin-top: 100px;
 }
 
 img {
@@ -89,35 +124,92 @@ img {
   display: block;
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0px auto;
+/* GRID GRID GRID GRID GRID GRID GRID GRID GRID (PRIMEIRA SESSÃO)*/
+
+section.grid1 {
+  padding-top: 30px;
 }
 
-.flex > div {
-  flex: 1 1 400px;
-  margin: 10px;
+.grid1 > div {
+  grid: 1 1 400px;
+  margin: 30px;
 }
 
 div#anacro > p {
-  line-height: 2em;
+  
+  line-height: 2.5em;
   text-indent: 20px;
   text-align: justify;
-  font-size: 1.2em;
+  font-size: 2rem;
   font-weight: bold;
   padding: 5px;
   margin-bottom: 10px;
 }
 
-.flex > div#manu {
+.grid1 > div#manu {
   border-top-left-radius: 37px 140px;
   border-top-right-radius: 23px 130px;
   border-bottom-left-radius: 110px 19px;
   border-bottom-right-radius: 120px 24px;
   border: 3px solid var(--black);
-  max-height: 510px;
-  background-color: white;
+  background-color: var(--cor3);
   transform: translateY(-10px) rotate(2deg);
+}
+
+.grid1 > div#paletcor{
+border-style: double;
+border: 3px solid var(--black);
+
+}
+
+.grid1 {
+  border: 10px double var(--cor5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  grid-gap: 20px;
+}
+
+.grid1-item:nth-child(1) {
+  grid-row: 1 / 4;
+}
+
+/* FLEX FLEX FLEX FLEX FLEX FLEX FLEX FLEX FLEX (SEGUNDA SESSÃO) */
+
+.flex1 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0px auto;
+}
+
+.flex1 > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 20px 100px 20px;
+  padding: 10px;
+  flex: 1 1 300px;
+  border: 1px solid black;
+  min-height: 400px;
+}
+
+.flex1 > div > p {
+  line-height: 2.5em;
+  text-indent: 20px;
+  text-align: justify;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.flex1 h2 {
+  font-family: var(--fonte1);
+  font-size: 2rem;
+  text-align: center;
+}
+
+#flex1-item1 {
+  background-image: linear-gradient(135deg, hsla(57, 48%, 32%, 1) 0%, hsla(57, 51%, 9%, 1) 100%);
 }
