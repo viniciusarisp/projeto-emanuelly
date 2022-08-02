@@ -85,12 +85,14 @@ header > a > h1 {
 
 #menu a {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: normal;
   font-family: var(--fonte1);
   text-align: center;
   color: var(--cor3);
   display: block;
-  padding: .5rem;
+  padding: 2.4rem 0;
+  margin: 0 1rem;
+  border-bottom: 2px solid #fef6ec;
 }
 
 #nav.active #menu {
@@ -99,11 +101,6 @@ header > a > h1 {
   overflow-y: auto;
 }
 
-#menu a {
-  padding: 2.4rem 0;
-  margin: 0 1rem;
-  border-bottom: 2px solid #fef6ec;
-}
 
 #btn-mobile {
   display: flex;
