@@ -1,0 +1,82 @@
+
+
+main {
+  display: flex;
+  position: relative;
+  height: calc(100vh - 75px);
+  width: 100%;
+  justify-content: center;
+}
+
+main > section.flex1 {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 95%;
+  height: 75vh;
+}
+
+.flex1 h1 { 
+  font-family: var(--fonte0);
+  text-align: right;
+  font-size: 3em;
+  color: var(--cor2);
+  line-height: 105%;
+}
+
+.flex1 h1::before {
+  content: 'CONSULTORIA DE MODA';
+  font-family: var(--fonte1);
+  font-size: 10px;
+  text-align: center;
+  display: block;
+  padding-right: 30px;
+  line-height: 5px;
+}
+
+#foto-landing {
+  margin-top: 30px;
+  width: 390px;
+  height: 490px;
+  padding-left: 10px;
+  margin-left: 10px;
+  border-left: var(--cor4) 3px solid;
+}
+
+#foto-landing img {
+  width: 100%;
+  height: 100%;
+}
+
+#foto-landing::after {
+  content: '';
+  margin-top: 10px;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--cor4);
+}
+
+/* Footer Footer Footer Footer Footer Footer Footer Footer */
+
+#footer a {
+  color: rgba(0, 0, 0, 0.705);
+  font-weight: bold;
+}
+
+#footer {
+  color: rgba(0, 0, 0, 0.705);
+  font-family: var(--fonte1);
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  padding: 4px;
+}
+
+#flex2 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
