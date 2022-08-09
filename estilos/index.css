@@ -1,6 +1,16 @@
-
+:root {
+  --fonte0: 'Tan Pearl';
+  --fonte1: 'Tenor Sans';
+  --cor0: #806B58;
+  --cor1: #78742A;
+  --cor2: #A36127;
+  --cor3: #fef6ec;
+  --cor4: #603807;
+  --cor5: ;
+}
 
 main {
+  background-color: var(--cor3);
   display: flex;
   position: relative;
   height: calc(100vh - 75px);
@@ -66,6 +76,7 @@ main > section.flex1 {
 }
 
 #footer {
+  background-color: var(--cor3);
   color: rgba(0, 0, 0, 0.705);
   font-family: var(--fonte1);
   font-weight: normal;
